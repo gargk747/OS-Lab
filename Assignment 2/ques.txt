@@ -1,0 +1,1 @@
+On a linux machine, explore proc virtual file system. Use command (cd /proc). Write a report on what information can be accessed from this file system and how?
