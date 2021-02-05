@@ -13,13 +13,13 @@ int main()
 	file = fopen(filename,"r");
 	if (pipe(p1) < 0 || pipe(p2) < 0 || pipe(p3) < 0) 
 	{
-	   perror("Can't open pipe\n");
+	   perror("\n Can't open pipe\n");
 	   exit(-1);
    	}
 	int f1 = fork();
 	if(f1 < 0)
 	{
-		printf("Error creating fork.\n");
+		printf("\n Error creating fork.\n");
 		exit(-1);
 	}
 	else if(f1 == 0)
@@ -61,7 +61,7 @@ int main()
 				j++;
 			}
 		}
-		printf("Process 2: %s", buff1);
+		printf("\n Process 2: %s\n", buff1);
 		write(p2[1], buff1, sizeof(buff1));
 	}
 	else if(f1 > 0)
@@ -69,7 +69,7 @@ int main()
 		int f2 = fork();
 		if(f2 < 0)
 		{
-			printf("Error creating fork.\n");
+			printf("\n Error creating fork.\n");
 			exit(-1);
 		}
 		else if(f2 == 0)
@@ -93,7 +93,7 @@ int main()
 					}
 				}
 			}
-			printf("Process 3: %s",buff);
+			printf("\n Process 3: %s\n",buff);
 			int count = 0;
 			for(i=0;i<sizeof(buff)/sizeof(buff[0]);i++)
 			{
@@ -107,12 +107,12 @@ int main()
 		{
 			// process 1
 			while (fgets(buff, sizeof(buff), file) != NULL) {
-				printf("Process 1: %s", buff);
+				printf("\n Process 1: %s\n", buff);
 				write(p1[1], buff, sizeof(buff));
 			}
 			int c;
 			read(p3[0],&c,sizeof(c));
-			printf("Process 1: Word count- %d\n",c);
+			printf("\n Process 1: Word count- %d\n",c);
 		}
 	}
    	return 0;
