@@ -1,4 +1,7 @@
-(A) PIPE: Three processes have to be created, First process reads data from a user specified file and through pipe sends this data to second process. Second process shall trim this input by removing extra spaces (only one blank between two words but there should be no blank before punctuation marks and there should be one blank after punctuation marks. Third process shall change the case of first character of every word to capital and rest to small case. This process should print these characters. This process should count number of words and pass this to first process, which shall print this.
+(A) PIPE: Three processes have to be created, First process reads data from a user specified file and through pipe sends this data to second process. 
+Second process shall trim this input by removing extra spaces (only one blank between two words but there should be no blank before punctuation marks and there should be one blank after punctuation marks. 
+Third process shall change the case of first character of every word to capital and rest to small case. This process should print these characters. 
+This process should count number of words and pass this to first process, which shall print this.
 
 (B) SHELL: You all have used shell (a shell is created when you launch terminal). So in this part, you shall write code for a very simple shell. Your shell
 1. prints out a prompt of your choice ( Some examples PathName>, PathName::, PathName>>>);
