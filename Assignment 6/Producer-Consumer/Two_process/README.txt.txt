@@ -1,0 +1,1 @@
+Use the Makefile to run the project. The project only works on Linux.
